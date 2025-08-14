@@ -1,0 +1,25 @@
+# .env.example — kopiere zu .env lokal und fülle echte Werte
+# NOTE: NEVER commit .env with real secrets into git
+
+# Backend / Spring Boot
+SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/bs_db
+SPRING_DATASOURCE_USERNAME=bs_user
+SPRING_DATASOURCE_PASSWORD=bs_pass_dev
+JWT_SECRET=dev_secret_change_me_replace_in_prod
+JWT_REFRESH_TTL_SECONDS=604800
+
+# Redis (refresh tokens, caches)
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+# AI Service
+OPENAI_API_KEY=               # set if you want cloud provider
+EMBEDDING_BACKEND=local       # 'openai' or 'local'
+LOCAL_EMBEDDING_MODEL=all-MiniLM-L6-v2
+
+# Dockerhub (CI)
+DOCKERHUB_USERNAME=
+DOCKERHUB_TOKEN=
+
+# Misc
+NODE_ENV=development
